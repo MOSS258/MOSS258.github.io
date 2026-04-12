@@ -1,1 +1,84 @@
-# MOSS258.github.io
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面 | GitHub Pages</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 2rem;
+            padding: 2.5rem;
+            max-width: 600px;
+            margin: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            backdrop-filter: blur(2px);
+        }
+        h1 {
+            color: #333;
+            margin-top: 0;
+            font-size: 2.5rem;
+        }
+        .status {
+            background: #10b981;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="status">✅ GitHub Pages 运行正常</div>
+        <h1>🎉 测试成功！</h1>
+        <p>如果你看到了这个页面，说明你的 GitHub Pages 已经正确部署。<br>你可以用这个文件作为起点，替换成你自己的内容。</p>
+        <p>当前时间：<strong id="time"></strong></p>
+        <div class="footer">
+            🚀 这是你的第一个测试页面 — 现在可以开始自定义啦！
+        </div>
+    </div>
+
+    <script>
+        // 显示当前时间，测试 JavaScript 是否正常执行
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleString('zh-CN');
+            document.getElementById('time').textContent = timeString;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
