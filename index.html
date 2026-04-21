@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>请输入文本</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, #1a1e2b 0%, #232838 100%);
+      font-family: system-ui, -apple-system, 'Noto Serif SC', 'Times New Roman', serif;
+      padding: 1.8rem;
+    }
+
+    .poem-card {
+      max-width: 780px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .quote-mark {
+      font-size: 4.5rem;
+      line-height: 1;
+      color: rgba(220, 200, 160, 0.3);
+      font-family: 'Georgia', serif;
+      margin-bottom: 0.2rem;
+      user-select: none;
+      
+    }
+      .poem-lines {
+      font-size: clamp(1.8rem, 6vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.8;
+      color: #ece7e0;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+      letter-spacing: 0.03em;
+      white-space: pre-line;   
+      word-break: break-word;
+      padding: 0.2rem 0.5rem;
+    }
+
+    .poem-author {
+      margin-top: 2.8rem;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #b9af9a;
+      letter-spacing: 2.5px;
+      border-top: 1px solid rgba(185, 175, 154, 0.25);
+      display: inline-block;
+      padding-top: 1.6rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      text-transform: uppercase;
+    }
+
+    .footer-note {
+      position: fixed;
+      bottom: 18px;
+      right: 22px;
+      color: rgba(180, 170, 150, 0.25);
+      font-size: 0.8rem;
+      font-family: monospace;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .poem-lines {
+        font-size: 1.8rem;
+        line-height: 1.7;
+      }
+      .poem-author {
+        font-size: 1rem;
+        margin-top: 2.2rem;
+        padding-top: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="poem-card">
+    <div class="quote-mark"></div>
+    <!-- 分行内容直接在这里用 <br> 换行，或者用纯文本 + 换行符（需搭配 white-space: pre-line） -->
+    <div class="poem-lines">
+      你看自由二字，本来就条条框框，但总有一笔冲出牢笼<br>
+      再看牢笼二字，看似四面透风。但以牛龙之力，也无法突破头顶的枷锁<br>
+
+  <div class="footer-note">✦ 几句 ✦</div>
+</body>
+</html>
